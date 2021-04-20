@@ -1,0 +1,16 @@
+.left-sidebar {
+  @extend %margin-bottom-lg;
+}
+
+.panet:last-of-type {
+  margin: 0;
+}
+
+.vertical-slider {
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+  }
+}
