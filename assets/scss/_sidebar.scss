@@ -92,3 +92,52 @@
     color: darken($color-gray, 30%);
   }
 }
+
+.top-films {
+  &__body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    background-color: transparent;
+    margin-left: -1px;
+    margin-right: -1px;
+    padding-right: 55px;
+    color: $color-primary !important;
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+
+    &:first-child {
+      border-radius: 0;
+      border-top: none;
+    }
+
+    &:last-child {
+      border-radius: 0;
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent !important;
+      color: $color-light !important;
+      border-color: $color-accent;
+
+      .badge {
+        background-color: $color-dark;
+      }
+    }
+  }
+
+  &__badge {
+    transition: background-color 0.25s;
+    position: absolute;
+    top: 50%;
+    right: $gap;
+    transform: translateY(-50%);
+  }
+}
