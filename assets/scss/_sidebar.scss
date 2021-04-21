@@ -2,8 +2,14 @@
   @extend %margin-bottom-lg;
 }
 
-.panet:last-of-type {
-  margin: 0;
+.panel {
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &-body-site-news {
+    padding-bottom: 0;
+  }
 }
 
 .vertical-slider {
@@ -33,5 +39,57 @@
     .active a {
       color: $color-light !important;
     }
+  }
+}
+
+.site-news-item {
+  $image-size: 75px;
+  $image-size-with-padding: $image-size + 10;
+
+  position: relative;
+  clear: both;
+  min-height: $image-size-with-padding;
+  margin-bottom: $gap;
+
+  &:not(:last-child)::after {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    width: calc(100% - #{$image-size-with-padding});
+    height: 1px;
+    content: "";
+    background-color: $color-gray;
+  }
+
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+    .site-news-item__image {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  &__image {
+    width: $image-size;
+    float: left;
+    margin: 0 ($gap / 3 * 2) ($gap / 3 * 2) 0;
+    font-size: 1rem;
+    transition: background-color 0.25s;
+  }
+
+  &__title {
+    margin-bottom: $gap / 3 * 2;
+    a {
+      transition: color 0.25s;
+      @include block-shortener(1rem, 1.5, 50px, 2);
+    }
+  }
+
+  &__date {
+    text-align: right;
+    font-size: 0.8rem;
+    color: darken($color-gray, 30%);
   }
 }
