@@ -6,10 +6,6 @@
   &:last-of-type {
     margin: 0;
   }
-
-  &-body-site-news {
-    padding-bottom: 0;
-  }
 }
 
 .vertical-slider {
@@ -48,17 +44,20 @@
 
   position: relative;
   clear: both;
-  min-height: $image-size-with-padding;
-  margin-bottom: $gap;
 
-  &:not(:last-child)::after {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-    width: calc(100% - #{$image-size-with-padding});
-    height: 1px;
-    content: "";
-    background-color: $color-gray;
+  &:not(:last-of-type) {
+    min-height: $image-size-with-padding;
+    margin-bottom: $gap;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      width: calc(100% - #{$image-size-with-padding});
+      height: 1px;
+      content: "";
+      background-color: $color-gray;
+    }
   }
 
   &:hover {
