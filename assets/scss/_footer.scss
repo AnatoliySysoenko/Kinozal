@@ -1,0 +1,23 @@
+.footer {
+  padding-top: 45px;
+  color: $color-light;
+  background-color: $color-dark;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: #777777;
+  }
+
+  &-fifth {
+    margin: 20px 0;
+    text-align: center;
+
+    a {
+      color: $color-light;
+    }
+  }
+}
