@@ -7,7 +7,9 @@
 }
 
 .navbar-inverse {
+  margin-bottom: 0;
   background-color: #191919;
+  border-color: transparent;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
@@ -227,9 +229,42 @@ section {
   text-align: justify;
 }
 
-.panel:last-of-type {
-  margin: 0;
+.embed-responsive {
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
 }
+
+.film-info {
+  font-size: 1.2em;
+}
+
+.film-info__well {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.film-info__wrapper {
+  white-space: nowrap;
+}
+
+.film-info__wrapper:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.film-info__badge {
+  font-size: 0.8em;
+}
+
+.well {
+  border-color: #dddddd;
+  background-color: #f1f1f1;
+}
+
+.film-comment-form__button {
+  float: right;
+}
+
 
 .vertical-slider {
   border-radius: 4px;
